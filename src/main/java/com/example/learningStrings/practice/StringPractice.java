@@ -108,5 +108,8 @@ public class StringPractice {
         //toUpperCase()
         var lowerCaseString = "this string was in all lowercase but this method made it all caps";
         System.out.println(lowerCaseString.toUpperCase());
+
+
+
     }
 }
