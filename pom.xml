@@ -8,13 +8,22 @@
 		<version>2.7.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	<!--12 & 13 are unique to the project -->
 	<groupId>com.example.learningStrings</groupId>
 	<artifactId>learningstrings</artifactId>
+	<!-- 1. Packaging JAR file -->
+	<packaging>jar</packaging>
+
 	<version>0.0.1-SNAPSHOT</version>
 	<name>learningStrings</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>11</java.version>
+		<!-- 2. Inside properties tag, start class tag followed by the package in the class with the @springboot annotation -->
+		<start-class>com.example.learningStrings.LearningStringsApplication</start-class>
+		<!-- 3. Go to Maven, package-->
+		<!-- 4. Go to terminal, java -jar (title of jar file) -->
+
 	</properties>
 	<dependencies>
 		<dependency>
@@ -45,6 +54,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${project.parent.version}</version>
 				<configuration>
 					<excludes>
 						<exclude>
